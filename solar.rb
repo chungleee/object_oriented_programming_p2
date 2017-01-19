@@ -7,8 +7,8 @@ class System
     @bodies = []
   end
 
-  def add
-
+  def add(body_name)
+    @bodies << body_name
   end
 
   def total_mass
@@ -54,3 +54,12 @@ class Moon < Body
   end
 
 end
+
+# create the instances below in irb
+# sun = Star.new('Sun', 50, 'G')
+# earth = Planet.new('Earth', 10, 24, 365)
+# earth_moon = Moon.new("Earth's Moon", 5, 14, earth)
+# system = System.new
+# system.add(sun)
+# system.add(earth)
+# system.add(earth_moon)
