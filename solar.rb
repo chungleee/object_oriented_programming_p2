@@ -8,11 +8,22 @@ class System
   end
 
   def add(body_name)
-    @bodies << body_name
+    name_counter = 0
+      @bodies.each do |body|
+        if body_name.name == body.name
+          name_counter += 1
+          puts "This name is already taken."
+        end
+      end
+        @bodies << body_name if name_counter == 0
   end
 
   def total_mass
-
+    total_mass = 0
+    @bodies.each do |body|
+      total_mass += body.mass
+    end
+    "#{total_mass}"
   end
 end
 
