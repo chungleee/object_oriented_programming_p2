@@ -16,13 +16,37 @@ class System
   end
 end
 
-class Body < System
+class Body
 
   attr_reader :name, :mass
 
   def initialize(name, mass)
     @name = name
     @mass = mass
+  end
+end
+
+class Planet < Body
+
+  def initialize(name, mass, day)
+    super(name, mass)
+    
+  end
+
+end
+
+class Star< Body
+
+  def initialize(name, mass)
+    super(name, mass)
+  end
+
+end
+
+class Moon < Body
+
+  def initialize(name, mass)
+    super(name, mass)
   end
 
 end
